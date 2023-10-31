@@ -47,7 +47,8 @@ class Rectangle:
         """ calculate perimeter of a rectangle """
         if self.__width == 0 or self.__height == 0:
             return 0
-        return (2 * (self.__height + self.__width))
+        else:
+            return (2 * (self.__height + self.__width))
 
     def __str__(self):
         """ return set of rectangle """
@@ -64,5 +65,5 @@ class Rectangle:
         return hashes
 
     def __repr__(self):
-        """ repr """
+        """ formal string representation of the rectangle """
         return "Rectangle({}, {})".format(self.__width, self.__height)
