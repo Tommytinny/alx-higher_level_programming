@@ -30,6 +30,10 @@ class Rectangle:
             height -= 1
         return hashes
 
+    def __repr__(self):
+        """ formal string representation of the rectangle """
+        return "Rectangle({}, {})".format(self.__width, self.__height)
+
     def __del__(self):
         """ destructor """
         Rectangle.number_of_instances -= 1
@@ -73,10 +77,6 @@ class Rectangle:
             return 0
         else:
             return (2 * (self.__height + self.__width))
-
-    def __repr__(self):
-        """ formal string representation of the rectangle """
-        return "Rectangle({}, {})".format(self.__width, self.__height)
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
