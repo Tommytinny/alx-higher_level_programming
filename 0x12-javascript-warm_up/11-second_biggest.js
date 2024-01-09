@@ -3,7 +3,7 @@
 let bigNum = 0;
 let sBigNum = 0;
 for (let i = 2; i < process.argv.length; i++) {
-  let num = Number(process.argv[i]);
+  const num = Number(process.argv[i]);
   if (num > bigNum) {
     sBigNum = bigNum;
     bigNum = num;
