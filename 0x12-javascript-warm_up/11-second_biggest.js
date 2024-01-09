@@ -3,11 +3,12 @@
 let bigNum = 0;
 let sBigNum = 0;
 for (let i = 2; i < process.argv.length; i++) {
-  if (process.argv[i] > bigNum) {
+  let num = Number(process.argv[i]);
+  if (num > bigNum) {
     sBigNum = bigNum;
-    bigNum = process.argv[i];
-  } else if (process.argv[i] > sBigNum && process.argv[i] < bigNum) {
-    sBigNum = process.argv[i];
+    bigNum = num;
+  } else if (num > sBigNum && num < bigNum) {
+    sBigNum = num;
   }
 }
 console.log(sBigNum);
