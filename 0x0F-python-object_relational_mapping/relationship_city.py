@@ -6,7 +6,7 @@ from relationship_state import Base
 
 
 class City(Base):
-    """ Class representing the city table """ 
+    """ Class representing the city table """
     __tablename__ = 'cities'
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
