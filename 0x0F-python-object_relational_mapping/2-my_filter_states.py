@@ -21,7 +21,7 @@ if __name__ == "__main__":
     matchName = sys.argv[4]
     cursor = conn.cursor()
     query = """
-    SELECT * FROM states WHERE name = '{}'
+    SELECT * FROM states WHERE name LIKE BINARY = '{}'
     ORDER BY states.id ASC
     """
     query = query.format(matchName)
