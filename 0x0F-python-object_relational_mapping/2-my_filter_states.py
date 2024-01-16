@@ -20,7 +20,11 @@ if __name__ == "__main__":
 
     matchName = sys.argv[4]
     cursor = conn.cursor()
-    query = f"SELECT * FROM states WHERE name = '{matchName}'"
+    query = """
+    SELECT * FROM states WHERE name = '{}'
+    ORDER BY states.id ASC
+    """
+    query = query.format(matchName)
     cursor.execute(query)
     rows = cursor.fetchall()
 
