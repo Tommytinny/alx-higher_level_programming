@@ -1,4 +1,5 @@
-#!/usr/bin/node
+#!/usr/bin/python3
+""" List states """
 
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship, backref
@@ -9,6 +10,7 @@ Base = declarative_base()
 
 
 class State(Base):
+    """ Class representing the state table """
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True,
                 autoincrement=True, nullable=False)
