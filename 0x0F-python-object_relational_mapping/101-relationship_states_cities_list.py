@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" List states """
 
 import sys
 from relationship_state import Base, State
