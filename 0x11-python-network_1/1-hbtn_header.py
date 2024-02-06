@@ -12,7 +12,7 @@ def main():
     req = urllib.request.Request(sys.argv[1])
     with urllib.request.urlopen(req) as response:
         header = response.headers
-    print(headers['X-Request-Id'])
+    print(header['X-Request-Id'])
 
 
 if __name__ == '__main__':
