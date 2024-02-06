@@ -5,6 +5,7 @@ to the URL and displays the body of the response.
 import requests
 from sys import argv
 
+
 def main():
     """ amin function """
     r = requests.get(argv[1])
