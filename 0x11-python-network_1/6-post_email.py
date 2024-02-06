@@ -6,9 +6,10 @@ a parameter, and finally displays the body of the response.
 import requests
 from sys import argv
 
+
 def main():
     """ main function """
-    r = request.post(argv[1], data={'email': argv[2]})
+    r = requests.post(argv[1], data={'email': argv[2]})
     page = r.text
     print(page)
 
