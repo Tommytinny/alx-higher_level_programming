@@ -5,6 +5,7 @@ http://0.0.0.0:5000/search_user with the letter as a parameter.
 import requests
 from sys import argv
 
+
 def main():
     """ main fuction """
     if len(argv) > 1:
@@ -18,7 +19,7 @@ def main():
             print("[{}] {}".format(page['id'], page['name']))
         else:
             print("No result")
-    except requests.exceptions.JSONDecodeError as e:
+    except ValueError as e:
         print("Not a valid JSON")
 
 
