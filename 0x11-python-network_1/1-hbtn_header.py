@@ -9,7 +9,7 @@ import sys
 
 def main():
     """ amin function """
-    req = urllib.request.Request(sysargv[1])
+    req = urllib.request.Request(sys.argv[1])
     with urllib.request.urlopen(req) as response:
         header = response.headers
     print(headers['X-Request-Id'])
