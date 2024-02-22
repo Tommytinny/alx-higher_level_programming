@@ -9,10 +9,10 @@ request(url, (error, response, body) => {
   if (!error && response.statusCode === 200) {
     fs.writeFile(process.argv[3], body, 'utf-8', (err) => {
       if (err) {
-        console.error('Error writing to the file: ${err})');
+        console.error(`Error writing to the file: ${err})`);
       }
     });
   } else {
-    console.error('Error: ${error}');
+    console.error(`Error: ${error}`);
   }
 });
