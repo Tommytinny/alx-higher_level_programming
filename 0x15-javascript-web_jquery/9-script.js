@@ -3,4 +3,4 @@ document.addEventListener('DOMContentLoaded', function () {
     const helloTransl = data.hello;
     $('DIV#hello').text(helloTransl);
   });
-});
+}); 
